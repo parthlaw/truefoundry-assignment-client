@@ -17,7 +17,7 @@ function App() {
     }
     const authenticate=async()=>{
       const data= await getUser();
-      if(!data){
+      if(!data|| data.error){
         setAuth(false)
       }else{
         setUser(data)
